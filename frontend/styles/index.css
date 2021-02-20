@@ -21,3 +21,131 @@ main {
   margin: 4rem auto;
   max-width: 60rem;
 }
+
+/* Rouge */
+
+.highlight table td { padding: 5px; }
+.highlight table pre { margin: 0; }
+.highlight, .highlight .w {
+  color: #444444;
+}
+.highlight .cp {
+  color: #CC00A3;
+}
+.highlight .cs {
+  color: #CC00A3;
+}
+.highlight .c, .highlight .ch, .highlight .cd, .highlight .cm, .highlight .cpf {
+  color: #FF0000;
+}
+
+.highlight .c1 {
+  color: #637777;
+}
+
+.highlight .kc {
+  color: #C34E00;
+}
+
+.highlight .nf,  .highlight .kd, .highlight .na   {
+  color: #80affd;
+}
+
+.highlight .kr {
+  color: #007575;
+}
+
+
+.highlight .mi {
+  color: #f58b6b;
+}
+
+
+
+.highlight .k, .highlight .kn, .highlight .kp, .highlight .kt, .highlight .kv, .highlight .nt {
+  color: #df75f2;
+}
+
+.highlight .nx {
+  color:
+}
+
+.highlight .s, .highlight .sb, .highlight .sc, .highlight .sd, .highlight .se, .highlight .sh, .highlight .sx, .highlight .sr, .highlight .ss {
+  color: #a6d85e;
+}
+
+.highlight .si,
+.highlight .language-ruby .p{
+color: #ffd700;
+
+}
+
+
+.highlight .sa {
+  color: #0000FF;
+}
+.highlight .s2, .highlight .s1,  .highlight .dl{
+  color: #ebc38d;
+}
+
+
+.highlight .nb, .highlight .bp {
+  color: #c5e478;
+}
+
+/* Block code, highlight */
+/* pre [data-lang]{
+  /* content: attr(data-lang); */
+  /* z-index: 100; */
+  /* position: relative; */
+  /* margin-right: 5px;
+  background-color: yellow; */
+
+  /* /* position: relative; */
+    /* code {
+
+        &[data-lang]::before {
+        position: absolute;
+        top: -.2rem;
+        right: .4rem;
+      }
+    }
+} */
+
+pre {
+    clear: both;
+    color: #fff;
+    background: #1b1b1b;
+    padding: 0;
+    -moz-tab-size: 2;
+    -o-tab-size: 2;
+    tab-size: 2;
+    -ms-word-break: normal;
+    word-break: normal;
+    -webkit-hyphens: none;
+    -ms-hyphens: none;
+    hyphens: none;
+    position: relative;
+    line-height: 28px;
+    border-radius: 8px;
+    min-width: 100px;
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+
+code[data-lang]:not([rel=""])::before {
+    font-style: normal;
+    font-size: 0.8rem;
+    content: attr(data-lang);
+    color: #fff;
+    position: absolute;
+    top: -.2rem;
+    right: .4rem;
+    padding: 0;
+    color: #ff7a18 !important;
+}
+

@@ -6,37 +6,58 @@ categories: stimulus
 permalink: /search-autocomplete-stimulus
 ---
 
-### Before You Start
+<div markdown='1' class="max-w-2xl mx-auto">
+
+<article markdown='1' class="prose max-w-none">
+
+## Before You Start
 
 Make sure you <span class="text-red-700">have Stimulus installed</span>. Check the package.json file or run ```yarn why stimulus```. If Stimulus is not yet installed, follow the documentation.
 
 Rails users can watch a GoRails episode. When using webpack, it's as easy as running ```bin/rails webpacker:install:stimulus```.
 
-
 ### 1. Install package
 
 Add [stimulus autocomplete](https://github.com/afcapel/stimulus-autocomplete) to your project
-```batch
+```bash
 yarn add stimulus-autocomplete
 ```
 
 A simple paragraph with an ID attribute.
-{: .bg-red-100 .text.red-700}
+{: .bg-red-100 .text.red-700 .px-2}
 
 
 ### 2. Add basic HTML layout
-```html
+{% highlight html %}
 <div data-controller="autocomplete" data-autocomplete-url-value="/birds/search">
   <input type="text" data-autocomplete-target="input"/>
   <input type="hidden" name="bird_id" data-autocomplete-target="hidden"/>
   <ul class="list-group" data-autocomplete-target="results"></ul>
 </div>
-```
+{% endhighlight %}
+
 
 ### 3. Create a partial to render results
-```html
-<li class="list-group-item" role="option" data-autocomplete-value="1">Blackbird</li>
-<li class="list-group-item" role="option" data-autocomplete-value="2">Bluebird</li>
-<li class="list-group-item" role="option" data-autocomplete-value="3">Mockingbird</li>
-```
 
+{% highlight ruby %}
+def abc
+  puts "hello"
+  value = { }
+  appelsap = 23 + 'abc' + "#{interpolation}"
+end
+{% endhighlight %}
+
+
+{% highlight javascript %}
+
+import "index.css"
+
+// Import all javascript files from src/_components
+const componentsContext = require.context("bridgetownComponents", true, /.js$/)
+componentsContext.keys().forEach(componentsContext)
+
+console.info("Bridgetown is loaded!")
+{% endhighlight %}
+
+</article>
+</div>
