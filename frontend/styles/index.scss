@@ -138,7 +138,7 @@ figure {
     position: relative;
     min-width: 100px;
     width: max-content;
-    /* max-width: 100%; */
+    max-width: 100%;
 }
 
 code[data-lang]:not([rel=""])::before {

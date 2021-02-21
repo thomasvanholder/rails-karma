@@ -8,16 +8,15 @@ permalink: /search-autocomplete-stimulus
 
 # {{ page.title }}
 
-Learn how to set-up a search autocomplete. A user can see resuts after typing in the search field. The Stimulus Autocomplete library is a pre-bulid Stimulus controller that provides an easy solution to auto-completion.
+## Introduction
 
-## What we will build
-![Alt Text](images/search-autocomplete.gif)
+Learn how to set-up a search autocomplete with Stimulus. A user can see query results after typing in the input field. The [Stimulus Autocomplete library](https://github.com/afcapel/stimulus-autocomplete) is a pre-build Stimulus controller that provides an easy solution to auto-completion.
+
+![autocomplete.gif](images/search-autocomplete.gif)
 
 ## Before you start
 
-Make sure you <span class="text-red-700">have Stimulus installed</span>. Check the package.json file or run `yarn why stimulus`. If Stimulus is not yet installed, follow the documentation.
-
-Rails users can watch a GoRails episode. When using webpack, it's as easy as running `bin/rails webpacker:install:stimulus`.
+Make sure you have Stimulus installed. Check the package.json file or run `yarn why stimulus`. If Stimulus is not yet installed, follow the [documentation](https://stimulus.hotwire.dev/handbook/installing).
 
 ## 1. Install package
 
@@ -25,9 +24,6 @@ Add [stimulus autocomplete](https://github.com/afcapel/stimulus-autocomplete) to
 {% highlight bash %}
 yarn add stimulus-autocomplete
 {% endhighlight %}
-
-A simple paragraph with an ID attribute.
-{: .bg-red-100 .text.red-700 .px-2}
 
 ## 2. Import library
 
@@ -46,7 +42,8 @@ Add to the **index.js** file
 <div class="max-w-xs mx-auto bg-white">
 
   <div data-controller="autocomplete" data-autocomplete-url-value="/autocomplete">
-    <input type="text" class="w-full" data-autocomplete-target="input" placeholder='Type to search...'/>
+    <input type="text" class="w-full" data-autocomplete-target="input"
+            placeholder='Type to search...'/>
     <ul data-autocomplete-target="results"></ul>
   </div>
 
@@ -55,7 +52,7 @@ Add to the **index.js** file
 Let's add a wrapper around to narrow the input field and search results.
 
 - **data-controller="autocomplete"** scopes the imported controller to the div
-- **data-autocomplete-url-value** sets the route to get the seach results from
+- **data-autocomplete-url-value** sets the route to get the search results from
 - **data-autocomplete-target="input"** listens for a keyboard change and reads the input field
 - **data-autocomplete-target="results"** is the wrapper to inject the result list items in
 
@@ -74,7 +71,7 @@ def autocomplete
 render layout: false
 end
 {% endhighlight %}
-Layout false ensures that only plain HTML is returned. The header and metadata are not included. This is exactly what we want as the search results should display text only.
+Layout false ensures that only plain HTML is returned. The header and metadata are not included. Precisely what is needed as the search results should display text only.
 
 ## 6. Create results view
 
@@ -85,3 +82,7 @@ Layout false ensures that only plain HTML is returned. The header and metadata a
 <% end %>
 {% endhighlight %}
 Display the search results in a HTML view that matches the created route<br>_products/_autocomplete.html.erb_
+
+## Conclusion
+
+Stimulus proves it value by sprinkling JavaScript on the page, without the need for much custom JavaScript. Leverage pre-build components and suddenly developers can easily bring interactivity to HTML-dominant web applications.
