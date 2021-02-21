@@ -5,6 +5,8 @@
 :root {
   --body-background: #fafafa;
   --body-color: #444;
+  --erb-red: #bc3e3a;
+  --ruby-blue: #82aaff;
 }
 
 body {
@@ -22,6 +24,7 @@ main {
   max-width: 60rem;
 }
 
+
 /* Rouge */
 
 .highlight table td { padding: 5px; }
@@ -29,9 +32,7 @@ main {
 .highlight, .highlight .w {
   color: #444444;
 }
-.highlight .cp {
-  color: #CC00A3;
-}
+
 .highlight .cs {
   color: #CC00A3;
 }
@@ -47,8 +48,10 @@ main {
   color: #C34E00;
 }
 
+
+
 .highlight .nf,  .highlight .kd, .highlight .na,.highlight .nl    {
-  color: #80affd;
+  color: #c4e377;
 }
 
 .highlight .kr {
@@ -70,12 +73,12 @@ main {
   color:
 }
 
-.highlight .s, .highlight .sb, .highlight .sc, .highlight .sd, .highlight .se, .highlight .sh, .highlight .sx, .highlight .sr, .highlight .ss, .highlight .nc  {
-  color: #a6d85e;
+.highlight .s, .highlight .sb, .highlight .sc, .highlight .sd, .highlight .se, .highlight .sh, .highlight .sx, .highlight .sr, .highlight .nc  {
+   color: #ebc38d;
 }
 
 .highlight .si,
-.highlight .language-ruby .p{
+.highlight {
 color: #ffd700;
 
 }
@@ -89,11 +92,48 @@ color: #ffd700;
 }
 
 
-.highlight .nb, .highlight .bp {
+.highlight .nb, .highlight .bp, .highlight .ss {
   color: #c5e478;
 }
 
-/* Block code, highlight */
+.highlighter-rouge {
+  background-color: blanchedalmond;
+  padding: 1px 5px;
+}
+
+/* ruby */
+.highlight .language-ruby .nf {
+  color: var(--ruby-blue);
+}
+
+/* erb */
+.highlight .language-erb .nf {
+  color: var(--ruby-blue);
+}
+
+.highlight .language-erb .err  {
+  color: var(--erb-red);
+}
+
+.highlight .cp {
+  color: var(--erb-red);
+}
+
+.highlight .nt {
+  color: unset;
+}
+
+.highlight .language-erb .vi {
+  color: #b9eae1;
+}
+
+
+/* inline */
+code.highlighter-rouge::before, code.highlighter-rouge::after {
+  content: normal;
+}
+
+/* Display code format no top-right of figure */
 figure {
     position: relative;
     min-width: 100px;
@@ -111,4 +151,5 @@ code[data-lang]:not([rel=""])::before {
     right: .3rem;
     color: #ff7a18 !important;
 }
+
 
