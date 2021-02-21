@@ -6,28 +6,26 @@ categories: stimulus
 permalink: /search-autocomplete-stimulus
 ---
 
-<div markdown='1' class="max-w-2xl mx-auto">
+# {{ page.title }}
 
-<article markdown='1' class="prose max-w-none">
+## Before you start
 
-## Before You Start
+Make sure you <span class="text-red-700">have Stimulus installed</span>. Check the package.json file or run `yarn why stimulus`. If Stimulus is not yet installed, follow the documentation.
 
-Make sure you <span class="text-red-700">have Stimulus installed</span>. Check the package.json file or run ```yarn why stimulus```. If Stimulus is not yet installed, follow the documentation.
+Rails users can watch a GoRails episode. When using webpack, it's as easy as running `bin/rails webpacker:install:stimulus`.
 
-Rails users can watch a GoRails episode. When using webpack, it's as easy as running ```bin/rails webpacker:install:stimulus```.
-
-### 1. Install package
+## 1. Install package
 
 Add [stimulus autocomplete](https://github.com/afcapel/stimulus-autocomplete) to your project
-```bash
+{% highlight bash %}
 yarn add stimulus-autocomplete
-```
+{% endhighlight %}
 
 A simple paragraph with an ID attribute.
 {: .bg-red-100 .text.red-700 .px-2}
 
+## 2. Add basic HTML layout
 
-### 2. Add basic HTML layout
 {% highlight html %}
 <div data-controller="autocomplete" data-autocomplete-url-value="/birds/search">
   <input type="text" data-autocomplete-target="input"/>
@@ -36,28 +34,31 @@ A simple paragraph with an ID attribute.
 </div>
 {% endhighlight %}
 
+## 3. Create a partial to render results
 
-### 3. Create a partial to render results
+{% highlight css %}
+.circle {
+border-radius: 50%;
+height: 50px;
+width: 50px;
+}
+{% endhighlight %}
 
 {% highlight ruby %}
 def abc
-  puts "hello"
-  value = { }
-  appelsap = 23 + 'abc' + "#{interpolation}"
+puts "hello"
+value = { }
+appelsap = 23 + 'abc' + "#{interpolation}"
 end
 {% endhighlight %}
-
 
 {% highlight javascript %}
 
 import "index.css"
 
-// Import all javascript files from src/_components
-const componentsContext = require.context("bridgetownComponents", true, /.js$/)
+// Import all javascript files from src/\_components
+const componentsContext = require.context("bridgetownComponents", true, /.js\$/)
 componentsContext.keys().forEach(componentsContext)
 
 console.info("Bridgetown is loaded!")
 {% endhighlight %}
-
-</article>
-</div>
