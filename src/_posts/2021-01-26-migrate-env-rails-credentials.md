@@ -1,13 +1,16 @@
 ---
 layout: post
-title: 'How to Migrate Environment Variables (ENV) to Rails Credentials'
+title: 'Migrate Environment Variables (ENV) to Rails Credentials'
 date: 2021-02-20 10:11:58 +0000
 categories: stimulus lightgallery
-permalink: /how-to-migrate-environment-variables-ENV-to-rails-credentials
+permalink: /migrate-environment-variables-ENV-to-rails-credentials
 ---
 
 # {{ page.title }}
 {: .text-left }
+
+{{ page.date }}
+
 
 Rails credentials are the new gold standard. ENV files are an insecure ancestor. In this article, you’ll learn why and how to migrate, how to use API keys in Ruby, YML and js.erb, and how to share a single key once with your team.
 

@@ -4,4 +4,13 @@
 layout: home
 ---
 
-Welcome to Bridgetown!
+- Ruby
+- Rails
+- Stimulus
+- Turbo
+- Strada (new)
+- Tailwind
+- ViewComponent
+- VSCode
+- Firefox
+{: .text-xl .space-y-2 .font-semibold}
