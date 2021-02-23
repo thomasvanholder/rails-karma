@@ -6,7 +6,8 @@ categories: stimulus search
 permalink: /search-autocomplete-stimulus
 ---
 
-## Introduction
+# {{ page.title }}
+{: .whitespace-nowrap .text-left }
 
 Learn how to set-up a search autocomplete with Stimulus. A user can see query results after typing in the input field. The [Stimulus Autocomplete library](https://github.com/afcapel/stimulus-autocomplete) is a pre-build Stimulus controller that provides an easy solution to auto-completion.
 
@@ -65,8 +66,8 @@ Fetch the HTML search results that should be displayed at the user types
 
 {% highlight ruby %}
 def autocomplete
-@search_results = ['apple', 'apple juice', 'apple compote']
-render layout: false
+  @search_results = ['apple', 'apple juice', 'apple compote']
+  render layout: false
 end
 {% endhighlight %}
 Layout false ensures that only plain HTML is returned. The header and metadata are not included. Precisely what is needed as the search results should display text only.
@@ -75,7 +76,6 @@ Layout false ensures that only plain HTML is returned. The header and metadata a
 
 {% highlight erb %}
 <% @search_results.each do |result| %>
-
   <li role="option" ><%= result %></li>
 <% end %>
 {% endhighlight %}

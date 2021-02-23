@@ -1,12 +1,13 @@
 ---
 layout: post
-title: 'Build a Lightgallery with Stimulus'
+title: 'Build a Light Gallery with Stimulus'
 date: 2021-02-20 10:11:58 +0000
 categories: stimulus lightgallery
 permalink: /build-a-lightgallery-with-stimulus
 ---
 
 # {{ page.title }}
+{: .whitespace-nowrap .text-left }
 
 In this article, you will learn how to set up a light gallery with Stimulus, a modest JavaScript framework for the HTML you already have. Stimulus is a powerful alternative to SPA’s and enables developers to bring web applications to life.
 
@@ -16,7 +17,7 @@ In this article, you will learn how to set up a light gallery with Stimulus, a m
 
 Stimulus is back-end and framework agnostic. Use it with your preferred back-end framework of choice. In this tutorial, Ruby on Rails is the chosen back-end framework.
 
-![autocomplete.gif](images/lightgallery.gif)
+![lightgallery.gif](images/lightgallery.gif)
 Demo: a light gallery for a pillow store. _Photos by Artem Podrez from Pexels_
 
 ## Before you start
