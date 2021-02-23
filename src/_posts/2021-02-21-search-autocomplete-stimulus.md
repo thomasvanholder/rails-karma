@@ -6,8 +6,6 @@ categories: stimulus search
 permalink: /search-autocomplete-stimulus
 ---
 
-# {{ page.title }}
-
 ## Introduction
 
 Learn how to set-up a search autocomplete with Stimulus. A user can see query results after typing in the input field. The [Stimulus Autocomplete library](https://github.com/afcapel/stimulus-autocomplete) is a pre-build Stimulus controller that provides an easy solution to auto-completion.
