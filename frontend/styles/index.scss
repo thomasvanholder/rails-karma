@@ -109,7 +109,7 @@ color: #ffd700;
 }
 
 .highlight .language-erb .err  {
-  color: var(--erb-red);
+  color: unset;
 }
 
 .highlight .language-erb .c  {
@@ -120,8 +120,12 @@ color: #ffd700;
   color: var(--erb-red);
 }
 
-.highlight .nt {
+.highlight .language-erb .nt {
   color: unset;
+}
+
+.highlight .language-erb .na {
+  color: #c4e377;
 }
 
 .highlight .language-erb .vi {
