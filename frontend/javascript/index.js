@@ -1,3 +1,5 @@
+import { Application } from 'stimulus'
+import ScrollTo from 'stimulus-scroll-to'
 import "index.scss"
 
 // Import all javascript files from src/_components
@@ -6,3 +8,5 @@ componentsContext.keys().forEach(componentsContext)
 
 console.info("Bridgetown is loaded!")
 
+const application = Application.start()
+application.register('scroll-to', ScrollTo)

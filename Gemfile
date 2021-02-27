@@ -12,7 +12,7 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 # To install a plugin, simply run bundle add and specify the group
 # "bridgetown_plugins". For example:
 #
-#   bundle add some-new-plugin -g bridgetown_plugins
+#   bu
 #
 # Happy Bridgetowning!
 

@@ -4,11 +4,11 @@ title: 'Smooth Scroll Stimulus'
 date: 2021-02-27 10:11:58 +0000
 categories: stimulus scroll
 permalink: /smooth-scroll-stimulus
+navigation: ['Before You Start', '1. Install the package', '2. Add Stimulus Scroll-To library', '3. Add sidebar', '4. Add HTML content', '5. Add basic CSS', '6. Add in pagination and buttons', 'Adding More Functionality', 'Conclusion']
 ---
 
 # {{ page.title }}
-
-{: .whitespace-nowrap .text-left }
+{: .text-left }
 
 Learn how to set up a smooth scrolling with Ruby on Rails and [Stimulus Components](https://github.com/stimulus-components). This is a simple and clean way to enable users to navigate through a page.
 
@@ -26,19 +26,19 @@ Add [Stimulus ScrollTo](https://stimulus-components.netlify.app/docs/components/
 yarn add stimulus-scroll-to
 {% endhighlight %}
 
-## 2. Add the Stimulus Carousel library
+## 2. Add Stimulus Scroll-To library
 
 {% highlight javascript %}
 import { Application } from "stimulus"
-import Carousel from "stimulus-carousel"
+import ScrollTo from "stimulus-scroll-to"
 
 const application = Application.start()
-application.register("carousel", Carousel)
+application.register("scroll-to", ScrollTo)
 {% endhighlight %}
 
-## 3. Import stylesheets
+## 3. Add sidebar
 
-{% highlight javascript %}
+{% highlight erb %}
 // In your application.js (for example)
 import 'swiper/swiper-bundle.min.css'
 
@@ -48,7 +48,7 @@ import 'swiper/swiper-bundle.min.css'
 
 Choose one of the two. If you get a “file import not found” error, try <br>_@import “swiper/swiper-bundle”_.
 
-## 4. Add the HTML layout to your page
+## 4. Add HTML content
 
 {% highlight erb %}
 
@@ -66,7 +66,7 @@ Choose one of the two. If you get a “file import not found” error, try <br>_
 
 Note the added **data-controller** attribute on line 2. Stimulus uses the identifier (“carousel”) to link the HTML page to JS controller (it’s creating a new carousel controller instance). The carousel’s scope is between the opening div and the closing div.
 
-## 5. Add in your content
+## 5. Add basic CSS
 
 The content of your slides (text, pictures, background) comes in the **swiper-slide div**. Or you can apply differentiated background styling.
 
@@ -126,7 +126,7 @@ That’s it, your slider is ready!
 ![carousel.gif](images/carousel.gif)
 {: .flex .justify-center }
 
-## Adding More Functionality to the Carousel
+## Adding More Functionality
 
 ![swiper-extra.gif](images/swiper.png)
 
