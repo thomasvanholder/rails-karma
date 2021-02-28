@@ -96,7 +96,7 @@ The hashtag(#) in the link_to will look on the same page for a matching id:
 </div>
 {% endhighlight %}
 
-Note that the code snippet above is a simplied, without Tailwind classes, in order to keep clean view.
+Note that the code snippet above is a simplified, without Tailwind classes, in order to keep clean view.
 
 That’s it, Smooth Scrolling is now functional!
 
