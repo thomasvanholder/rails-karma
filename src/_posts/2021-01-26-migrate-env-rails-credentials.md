@@ -4,12 +4,14 @@ title: 'Migrate Environment Variables (ENV) to Rails Credentials'
 date: 2021-02-20 10:11:58 +0000
 categories: stimulus lightgallery
 permalink: /migrate-environment-variables-ENV-to-rails-credentials
+navigation: ['Why Should You Move From ENV to Credentials?', 'How it Works', 'Migrate From ENV to Rails Credentials', 'How to Use Credentials in Multiple File Formats', 'How to Share Keys With a Team', 'Conclusion']
 ---
 
 # {{ page.title }}
 {: .text-left }
 
-{{ page.date }}
+{{ page.date | date: "%b %d, %Y" }}
+{: .italic .text-sm}
 
 Rails credentials are the new gold standard. ENV files are an insecure ancestor. In this article, you’ll learn why and how to migrate, how to use API keys in Ruby, YML and js.erb, and how to share a single key once with your team.
 
@@ -21,7 +23,7 @@ DHH tweeted about its arrival nearly three years ago, but new technology often t
 <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Rails 5.2.0 final is out the door! Just in time for <a href="https://twitter.com/railsconf?ref_src=twsrc%5Etfw">@railsconf</a> ❤️. Please enjoy Active Storage, Redis Cache Store, HTTP/2 Early Hints, CSP, Credentials, and more! <a href="https://t.co/z4VWJTclhc">https://t.co/z4VWJTclhc</a></p>&mdash; DHH (@dhh) <a href="https://twitter.com/dhh/status/983452583368019968?ref_src=twsrc%5Etfw">April 9, 2018</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 </div>
 
-## Why Should You Move From .Env to Credentials?
+## Why Should You Move From ENV to Credentials?
 
 The further a project gets in its development cycle, the more services are integrated. Every external service has its API key. It usually doesn’t take too long before developers start hunting teammates for the latest API key. How annoying!
 
@@ -45,7 +47,7 @@ Running `bin/rails credentials:edit` in rails creates two files needed in the co
 
 **Credentials.yml.enc** is safe and secure sent along with your repository to Github. The master key, however, is never sent along — guard it like your life depends on it!
 
-## Migrate From .Env to Rails Credentials
+## Migrate From ENV to Rails Credentials
 
 Open the credentials file in your terminal.<br>
 `EDITOR='code --wait' bin/rails credentials:edit`
@@ -94,7 +96,6 @@ It’s time now to say goodbye to that old .ENV file and delete it.
 ### Ruby
 
 {% highlight ruby %}
-
 # nested key
 Rails.application.credentials.stripe[:publishable_key]
 

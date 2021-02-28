@@ -4,6 +4,7 @@ title: 'Search Autocomplete Stimulus'
 date: 2021-02-20 10:11:58 +0000
 categories: stimulus search
 permalink: /search-autocomplete-stimulus
+navigation: ['Before you start', '1. Install the package', '2. Import library', '3. Add basic HTML layout', '4. Create route', '5. Create controller method', '6. Create results view', 'Conclusion']
 ---
 
 # {{ page.title }}
@@ -17,7 +18,7 @@ Learn how to set-up a search autocomplete with Stimulus. A user can see query re
 
 Make sure you have Stimulus installed. Check the package.json file or run `yarn why stimulus`. If Stimulus is not yet installed, follow the [documentation](https://stimulus.hotwire.dev/handbook/installing).
 
-## 1. Install package
+## 1. Install the package
 
 Add [stimulus autocomplete](https://github.com/afcapel/stimulus-autocomplete) to your project
 {% highlight bash %}

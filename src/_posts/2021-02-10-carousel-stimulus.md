@@ -4,6 +4,7 @@ title: 'Build a Carousel with Stimulus'
 date: 2021-02-20 10:11:58 +0000
 categories: stimulus carousel
 permalink: /build-a-carousel-stimulus
+navigation: ['Before you start', '1. Install the package', '2. Add the Stimulus Carousel library', '3. Import stylesheets', '4. Add basic HTML layout', '5. Add CSS and content', '6. Add pagination and buttons', 'Adding More Functionality', 'Conclusion' ]
 ---
 
 # {{ page.title }}
@@ -47,7 +48,7 @@ import 'swiper/swiper-bundle.min.css'
 
 Choose one of the two. If you get a “file import not found” error, try <br>_@import “swiper/swiper-bundle”_.
 
-## 4. Add the HTML layout to your page
+## 4. Add basic HTML layout
 
 {% highlight erb %}
 <!-- Slider main container -->
@@ -64,7 +65,7 @@ Choose one of the two. If you get a “file import not found” error, try <br>_
 
 Note the added __data-controller__ attribute on line 2. Stimulus uses the identifier (“carousel”) to link the HTML page to JS controller (it’s creating a new carousel controller instance). The carousel’s scope is between the opening div and the closing div.
 
-## 5. Add in your content
+## 5. Add CSS and content
 
 The content of your slides (text, pictures, background) comes in the __swiper-slide div__. Or you can apply differentiated background styling.
 
@@ -91,7 +92,7 @@ The content of your slides (text, pictures, background) comes in the __swiper-sl
 </style>
 {% endhighlight %}
 
-## 6. Add in pagination and buttons
+## 6. Add pagination and buttons
 
 {% highlight erb %}
 <div data-controller="carousel" class="my-5 swiper-container w-25"
@@ -110,7 +111,6 @@ The content of your slides (text, pictures, background) comes in the __swiper-sl
 </div>
 {% endhighlight %}
 
-
 - Swiper buttons allow users to tap navigation chevrons (__< >__).
 - Swiper pagination displays the page like slide 1/10, … or a progress bar.
 - __Data-carousel-options-value__ is a way to pass any functionality of the [chosen features](https://swiperjs.com/demos) as data attributes in the HTML.
@@ -122,7 +122,7 @@ That’s it, your slider is ready!
 ![carousel.gif](images/carousel.gif)
 {: .flex .justify-center }
 
-## Adding More Functionality to the Carousel
+## Adding More Functionality
 
 ![swiper-extra.gif](images/swiper.png)
 
