@@ -130,12 +130,27 @@ color: #ffd700;
 
 .highlight .language-erb .vi {
   color: #b9eae1;
-  color: #b9eae1;
 }
 
 /* css */
 .highlight .language-css .nt {
+  color: red;
+}
+.highlight .language-css .o {
   color: var(--comment-grey);
+}
+
+.highlight .language-css .c {
+  color: var(--comment-grey);
+}
+
+.highlight .language-css .err {
+  color: #c5e478;
+}
+
+/* html */
+.highlight .language-html .nt{
+  color: #b9eae1;
 }
 
 
