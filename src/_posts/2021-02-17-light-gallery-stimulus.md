@@ -5,6 +5,7 @@ date: 2021-02-20 10:11:58 +0000
 categories: stimulus lightgallery
 permalink: /build-a-lightgallery-with-stimulus
 navigation: ['Before you start', '1. Install the package', '2. Add the Stimulus Lightbox library', '3. Import stylesheets', '4. Add basic HTML layout', '5. Add basic CSS', '6. Add captions', '7. Add additional options', 'Conclusion' ]
+featured_img: "/images/lightgallery.gif"
 ---
 
 # {{ page.title }}

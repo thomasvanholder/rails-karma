@@ -133,6 +133,11 @@ color: #ffd700;
   color: #b9eae1;
 }
 
+/* css */
+.highlight .language-css .nt {
+  color: var(--comment-grey);
+}
+
 
 /* inline */
 code.highlighter-rouge::before, code.highlighter-rouge::after {
