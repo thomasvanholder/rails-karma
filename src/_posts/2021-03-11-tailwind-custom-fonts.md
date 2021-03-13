@@ -1,9 +1,9 @@
 ---
 layout: post
-title: 'Tailwind Custom Fonts'
+title: 'Tailwind Custom Local and Google Fonts'
 date: 2021-02-27 10:11:58 +0000
 categories: tailwind
-permalink: /tailwind-custom-fonts
+permalink: /tailwind-custom-local-fonts
 navigation: ['1a. Import Google Fonts', '1b. Import local fonts', '2. Overwrite or Extend', '3. Apply styles']
 featured_img: /images/font-import.png
 ---
@@ -27,10 +27,10 @@ To use the different font you could either use an `@import` from Google fonts or
 
 Visit [Google Fonts](https://fonts.google.com/) and search the specific font you like. Select the style variants from thin (100) to bold (900). Copy the import statement in between the style tags.
 
-![font-import.png](images/font-import.png)gst
+![font-import.png](images/font-import.png)
 {: .w-96}
 
-Import the font above css file where you import tailwind classes
+Import the font above css file where you import tailwind classes, i.e. styles.css.
 {% highlight css %}
 /* body font */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
@@ -42,15 +42,31 @@ Import the font above css file where you import tailwind classes
 
 ## 1b. Import local fonts
 
-## Rails asset pipeline
+Find an appealing font is not on Google Fonts, such as the handwritten [Barcelony](https://www.dafont.com/barcelony.font).
 
-First, make sure the font folder is loaded into the application. In the `application.rb` file add:
+![barcelony.png](images/barcelony.png)
+{: .w-96}
+_image source: https://www.dafont.com/barcelony.font_
+{: .text-gray-500 .font-light .text-sm}
+
+
+Create a fonts folder in the assets pipeline (i.e. assets/fonts).
+In the fonts folder add one of your custom font files, for example:
+- `.ttf` for TryeType Fonts
+- `.woff` for Web Open Format
+- `.otf` for OpenType
+
+With Rails the trick is to explicity load the newly created font folder into the application.<br>
+In the `application.rb` file add:
 
 {% highlight ruby %}
 # load custom fonts in the asset pipeline
-
 config.assets.paths << Rails.root.join("app", "assets", "fonts")
 {% endhighlight %}
+
+Make sure to restart the server.
+
+Next, add the font to the bottom of the styles.css file.
 
 {% highlight css %}
 @layer base {
@@ -61,7 +77,8 @@ config.assets.paths << Rails.root.join("app", "assets", "fonts")
 }
 {% endhighlight %}
 
-[Stackoverflow](https://stackoverflow.com/questions/12849840/integrating-font-face-files-into-rails-asset-pipeline/12849881#12849881)
+- the __font-family__ value is what will be passed into the Tailwind config.
+- _src_ is the path to the local font.
 
 ## 2. Overwrite or extend
 
@@ -101,9 +118,9 @@ Font-heading is the newly added Oswald font. To apply the font we can add to the
 
 ## 3. Apply styles
 
-Apply a style globally.
+Apply styles globally.
+In the file where you import the Tailwind classes add:
 
-tailwind.css
 {% highlight css %}
 @layer base {
   h1 {
@@ -123,4 +140,5 @@ Be aware of order specificity. If you have a color set in the HTML on the h1 tag
 {% endhighlight %}
 Awesome Title
 {: .text-red-500}
-The title will be red, not green.
+
+Thanks for reading!
